@@ -1,0 +1,23 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--strict",
+    "--show-column-numbers",
+    "--allow-untyped-decorators"
+  ],
+  "python.formatting.provider": "black",
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "eslint.workingDirectories": ["./frontend"],
+  "npm.packageManager": "yarn",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "python.analysis.typeCheckingMode": "off"
+}
