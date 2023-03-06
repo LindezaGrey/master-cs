@@ -1,8 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.194.3/containers/vue
 {
-	"name": "metaverse-office Mk2",
-	// "dockerComposeFile": "docker-compose.yml",
+	"name": "cs",
+	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
 	// Set *default* container specific settings.json values on container create.
