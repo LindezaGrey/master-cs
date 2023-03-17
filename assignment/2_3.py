@@ -7,8 +7,16 @@ the equator.
 Pole and the equator.
 • A nautical mile is 1 minute of an arc
 """
-import sys
 
-print(sys.path)
-km = float(input("Enter the number of kilometers: "))
-conversion_ratio = 1 / 10000 * 90 * 60
+
+def calculate() -> float:
+    conversion_ratio = (1 / 10000) * 90 * 60
+    while True:
+        try:
+            km = float(input("Enter the number of kilometers: "))
+            return km * conversion_ratio
+        except ValueError:
+            print("Please enter a valid number")
+
+
+print(calculate())
