@@ -9,14 +9,21 @@ Pole and the equator.
 """
 
 
-def calculate() -> float:
-    conversion_ratio = (1 / 10000) * 90 * 60
+def read_input(
+    prompt: str,
+) -> float:
     while True:
         try:
-            km = float(input("Enter the number of kilometers: "))
-            return km * conversion_ratio
+            return float(input(f"{prompt}: "))
         except ValueError:
             print("Please enter a valid number")
 
 
-print(calculate())
+def calculate_NM() -> dict[str, float]:
+    conversion_ratio = (1 / 10000) * 90 * 60
+    input_in_km = read_input(prompt="Enter the number of kilometers")
+    return {"input": input_in_km, "output": input_in_km * conversion_ratio}
+
+
+result = calculate_NM()
+print(result["input"], "kilometers is", result["output"], "nautical miles")
