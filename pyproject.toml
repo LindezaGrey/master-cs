@@ -7,6 +7,7 @@ authors = ["LindezaGrey <39629455+LindezaGrey@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+black = "^23.1.0"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.0.256"

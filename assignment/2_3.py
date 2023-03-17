@@ -12,4 +12,3 @@ import sys
 print(sys.path)
 km = float(input("Enter the number of kilometers: "))
 conversion_ratio = 1 / 10000 * 90 * 60
-
