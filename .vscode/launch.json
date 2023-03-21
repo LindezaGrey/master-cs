@@ -1,80 +1,41 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "compounds": [
-      {
-        "name": "-> Run stack",
-        "configurations": [
-          "Python: celery",
-          "Python: FastAPI & Vue",
-        ]
-      }
-    ],
-    "configurations": [
-      {
-        "name": "Python: Current File",
-        "type": "python",
-        "request": "launch",
-        "program": "${file}",
-        "console": "integratedTerminal",
-        "justMyCode": false
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": { "PYTHONPATH": "${workspaceFolder}" }
+    },
+    {
+      "name": "Python: FastAPI & Vue",
+      "justMyCode": false,
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "backend.main:app",
+        "--port",
+        "3000",
+        "--reload",
+        "--reload-dir",
+        "backend",
+        "--reload-exclude",
+        "backend/celeryworker/**",
+        "--host",
+        "0.0.0.0"
+      ],
+      "env": {
+        "PYDEVD_DISABLE_FILE_VALIDATION": "1"
       },
-      {
-        "name": "Python: FastAPI & Vue",
-        "justMyCode": false,
-        "type": "python",
-        "request": "launch",
-        "module": "uvicorn",
-        "cwd": "${workspaceFolder}",
-        "args": [
-          "backend.main:app",
-          "--port",
-          "3000",
-          "--reload",
-          "--reload-dir",
-          "backend",
-          "--reload-exclude",
-          "backend/celeryworker/**",
-          "--host",
-          "0.0.0.0"
-        ],
-        "env": {
-          "PYDEVD_DISABLE_FILE_VALIDATION": "1"
-        },
-        "preLaunchTask": "yarn serve",
-      },
-      {
-        "name": "Python: celery",
-        "type": "python",
-        "request": "launch",
-        "module": "celery",
-        "cwd": "${workspaceFolder}",
-        "args": [
-          "--app=backend.celeryworker.celery_app.celery_app",
-          "worker",
-          "-c",
-          "1",
-          "--loglevel=info"
-        ]
-      },
-      // {
-      //   "name": "Python: celery watchdog",
-      //   "console": "integratedTerminal",
-      //   "type": "python",
-      //   "request": "launch",
-      //   "module": "watchdog.watchmedo",
-      //   "cwd": "${workspaceFolder}/backend",
-      //   "args": [
-      //     "auto-restart",
-      //     "--directory=./",
-      //     "--pattern=*.py",
-      //     "--recursive",
-      //     "'poetry shell'",
-      //     "--",
-      //     "run",
-      //   ]
-      // }
-    ]
-  }
+      "preLaunchTask": "yarn serve",
+    },
+  ]
+}

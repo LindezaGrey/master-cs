@@ -24,7 +24,8 @@ def calculate_sum_and_average() -> dict[str, float]:
     return {"sum": sum(numbers), "average": sum(numbers) / len(numbers)}
 
 
-print("Press Ctrl+C to stop entering numbers")
-result = calculate_sum_and_average()
-print("\nThe sum of the numbers is", result["sum"])
-print("The average of the numbers is", result["average"])
+if __name__ == "__main__":
+    print("Press Ctrl+C to stop entering numbers")
+    result = calculate_sum_and_average()
+    print("\nThe sum of the numbers is", result["sum"])
+    print("The average of the numbers is", result["average"])
