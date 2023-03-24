@@ -15,11 +15,23 @@ def half_adder(a: bool, b: bool) -> tuple[bool, bool]:
     # Return the sum and carry
     return sum, carry
 
-def barrel_shifter_python(a: int, b: int) -> int:
-    # Calculate the result
-    result = a << b
-    # Return the result
-    return result
+
+def left_shifter_python(a: int, b: int) -> int:
+    """
+    The calculation that is performed is:
+    a * 2^b
+    """
+
+    return a << b
+
+
+def right_shifter_python(a: int, b: int) -> int:
+    """
+    The calculation that is performed is:
+    a / 2^b
+    """
+
+    return a >> b
 
 
 def barrel_shifter(num: int, shift_amt: int, direction: str) -> int:
@@ -56,5 +68,5 @@ if __name__ == "__main__":
     print(full_adder(True, True, True))
     print(full_adder(True, True, False))
 
-    print(barrel_shifter_python(660, 3))
+    print(left_shifter_python(660, 3))
     print(barrel_shifter(660, 3, "left"))
