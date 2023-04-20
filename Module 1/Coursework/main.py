@@ -65,14 +65,18 @@ def read_input(
 
 
 def process_file() -> None:
-    # file_name = read_input(prompt="Enter the file path", default=True)
-    file_name = read_input(prompt="Enter the file path")
+    file_name = read_input(prompt="Enter the file path", default=True)
+    # file_name = read_input(prompt="Enter the file path")
 
     lines = read_csv_file(file_name)
     if not lines:
         return None
 
-    print(f"Number of data-rows: {len(lines)}")
+    number_of_rows = len(lines)
+    average = sum([line.air for line in lines]) / number_of_rows
+
+    print(f"Own Calculation -> Number of data-rows (without headers): {number_of_rows}")
+    print(f"Own Calculation -> Average air temperature: {average}")
 
     return None
 
