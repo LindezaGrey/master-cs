@@ -5,6 +5,8 @@ from dataclasses import dataclass, field
 import pathlib
 from typing import Union, List
 
+logging.basicConfig(level=logging.INFO)
+
 
 @dataclass
 class TemperatureReading:
@@ -75,8 +77,10 @@ def process_file() -> None:
     number_of_rows = len(lines)
     average = sum([line.air for line in lines]) / number_of_rows
 
-    print(f"Own Calculation -> Number of data-rows (without headers): {number_of_rows}")
-    print(f"Own Calculation -> Average air temperature: {average}")
+    logging.info(
+        f"Own Calculation -> Number of data-rows (without headers): {number_of_rows}"
+    )
+    logging.info(f"Own Calculation -> Average air temperature: {average}")
 
     return None
 

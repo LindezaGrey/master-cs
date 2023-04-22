@@ -1,7 +1,10 @@
+import logging
 import pandas as pd
 import numpy as np
 
 from main import read_input
+
+logging.basicConfig(level=logging.INFO)
 
 
 def test_statistics_numpy() -> None:
@@ -17,9 +20,11 @@ def test_statistics_numpy() -> None:
     # correlation between the second and third column
     correlation = np.corrcoef(data[:, 1], data[:, 2])[0, 1]
 
-    print(f"Numpy-Result -> Correlation between the air and cpu column: {correlation} ")
-    print(f"Numpy-Result -> Number of rows: {number_of_rows}")
-    print(f"Numpy-Result -> Average of the second column: {average}")
+    logging.info(
+        f"Numpy-Result -> Correlation between the air and cpu column: {correlation} "
+    )
+    logging.info(f"Numpy-Result -> Number of rows: {number_of_rows}")
+    logging.info(f"Numpy-Result -> Average of the second column: {average}")
 
 
 def test_statistics_pandas() -> None:
@@ -35,11 +40,11 @@ def test_statistics_pandas() -> None:
     # correlation between the second and third column
     correlation = data["Air"].corr(data["CPU"])
 
-    print(
+    logging.info(
         f"Pandas-Result -> Correlation between the air and cpu column: {correlation} "
     )
-    print(f"Pandas-Result -> Number of rows: {number_of_rows}")
-    print(f"Pandas-Result -> Average of the second column: {average}")
+    logging.info(f"Pandas-Result -> Number of rows: {number_of_rows}")
+    logging.info(f"Pandas-Result -> Average of the second column: {average}")
 
 
 if __name__ == "__main__":
