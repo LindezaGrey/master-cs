@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   devcontainer:
-    container_name: master-cs
+    container_name: master-cs-module-1
     build:
       context: ..
-      dockerfile: .devcontainer/Dockerfile
+      dockerfile: Dockerfile
       args:
         PYTHON_VARIANT: 3.11-bullseye
         NODE_VERSION: "16"
