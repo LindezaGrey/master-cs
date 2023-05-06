@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Push to Mayar",
+            "command": "bash",
+            "type": "shell",
+            "args": [
+                "${workspaceFolder}/Module 2/deploy-mayar.sh"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        }
+    ]
+}

@@ -4,38 +4,6 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    {
-      "name": "Python: Current File",
-      "type": "python",
-      "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal",
-      "justMyCode": false,
-      "env": { "PYTHONPATH": "${workspaceFolder}" }
-    },
-    {
-      "name": "Python: FastAPI & Vue",
-      "justMyCode": false,
-      "type": "python",
-      "request": "launch",
-      "module": "uvicorn",
-      "cwd": "${workspaceFolder}",
-      "args": [
-        "backend.main:app",
-        "--port",
-        "3000",
-        "--reload",
-        "--reload-dir",
-        "backend",
-        "--reload-exclude",
-        "backend/celeryworker/**",
-        "--host",
-        "0.0.0.0"
-      ],
-      "env": {
-        "PYDEVD_DISABLE_FILE_VALIDATION": "1"
-      },
-      "preLaunchTask": "yarn serve",
-    },
+
   ]
 }

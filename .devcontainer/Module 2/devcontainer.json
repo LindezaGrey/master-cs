@@ -26,16 +26,16 @@
 		}
 	},
 	"forwardPorts": [
-		8080,
-		3000
+		80
 	],
 	"portsAttributes": {
-		"8000": {
+		"80": {
 			"label": "Apache / PHP",
 			"onAutoForward": "notify"
 		}
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sudo chmod a+x \"$(pwd)/Module 2/www\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)/Module 2/www\" /var/www/html",
+	"postStartCommand": "apache2ctl start",
 	"remoteUser": "vscode"
 }
