@@ -11,7 +11,7 @@ services:
         NODE_VERSION: "16"
         POETRY_VERSION: 1.1.14
     volumes:
-      - ..:/workspace:cached
+      - ../..:/workspace:cached
     init: true
 
     # Overrides default command so things don't shut down after the process ends.
