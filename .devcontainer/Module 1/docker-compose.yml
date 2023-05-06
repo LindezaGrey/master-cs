@@ -5,7 +5,7 @@ services:
     container_name: master-cs-module-1
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: ./Module 1/Dockerfile
       args:
         PYTHON_VARIANT: 3.11-bullseye
         NODE_VERSION: "16"
