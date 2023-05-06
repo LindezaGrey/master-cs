@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.194.3/containers/vue
 {
-	"name": "cs",
+	"name": "module-2-devcontainer",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
@@ -13,33 +13,15 @@
 					"path": "/bin/bash"
 				}
 			},
-			"python.pythonPath": "/usr/local/bin/python",
-			"python.defaultInterpreterPath": "/usr/local/bin/python",
-			"python.languageServer": "Default",
-			"python.linting.enabled": true,
-			"python.linting.pylintEnabled": true,
-			"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
-			"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
-			"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
-			"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
-			"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
-			"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
-			"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
-			"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-			"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"github.copilot",
 				"dbaeumer.vscode-eslint",
 				"eamodio.gitlens",
-				"ms-python.vscode-pylance",
-				"ms-python.python",
-				"octref.vetur",
 				"tonybaloney.vscode-pets",
 				"vscode-icons-team.vscode-icons",
 				"seatonjiang.gitmoji-vscode",
 				"zhuangtongfa.Material-theme",
-				"charliermarsh.ruff"
 			]
 		}
 	},
@@ -48,17 +30,12 @@
 		3000
 	],
 	"portsAttributes": {
-		"8080": {
-			"label": "Vue Frontend",
-			"onAutoForward": "notify"
-		},
-		"3000": {
-			"label": "FastAPI",
+		"8000": {
+			"label": "Apache / PHP",
 			"onAutoForward": "notify"
 		}
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "poetry config virtualenvs.create false && poetry update && poetry install",
-	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"postCreateCommand": "sudo chmod a+x \"$(pwd)/Module 2/www\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)/Module 2/www\" /var/www/html",
 	"remoteUser": "vscode"
 }
