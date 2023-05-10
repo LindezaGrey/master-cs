@@ -36,6 +36,6 @@
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sudo chmod a+x \"$(pwd)/Module 2/www\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)/Module 2/www\" /var/www/html",
-	"postStartCommand": "apache2ctl start",
+	"postAttachCommand": "apache2ctl start",
 	"remoteUser": "vscode"
 }
