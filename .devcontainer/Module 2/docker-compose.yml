@@ -35,7 +35,7 @@ services:
       - 8089:80
     environment:
       PMA_ARBITRARY: 1
-      PMA_HOST: mariadb
+      PMA_HOST: db
       PMA_USER: mariadb
       PMA_PASSWORD: mariadb
     # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MariaDB locally.
