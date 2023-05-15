@@ -26,11 +26,16 @@
 		}
 	},
 	"forwardPorts": [
-		80
+		80,
+		8089
 	],
 	"portsAttributes": {
 		"80": {
 			"label": "Apache / PHP",
+			"onAutoForward": "notify"
+		},
+		"8089": {
+			"label": "PHPMYADMIN",
 			"onAutoForward": "notify"
 		}
 	},
