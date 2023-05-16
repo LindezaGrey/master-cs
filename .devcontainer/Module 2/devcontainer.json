@@ -34,6 +34,10 @@
 			"label": "Apache / PHP",
 			"onAutoForward": "notify"
 		},
+		"8080": {
+			"label": "Apache / PHP",
+			"onAutoForward": "notify"
+		},
 		"8089": {
 			"label": "PHPMYADMIN",
 			"onAutoForward": "notify"
