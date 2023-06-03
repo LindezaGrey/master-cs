@@ -9,7 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='tables.css'>
     <script src='main.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.jss" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
@@ -31,7 +31,7 @@
                             Other Submissions
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/news.php">News</a></li>
+                            <li><a class="dropdown-item" href="./news.php">News</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -86,7 +86,7 @@
 
             </div>
             <div class="col-sm-6">
-                <img src="/assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow" style="max-height: 30vh;">
+                <img src="./assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow" style="max-height: 30vh;">
             </div>
         </div>
     </div>
