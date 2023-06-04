@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
@@ -9,16 +9,22 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='tables.css'>
     <script src='main.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">HEP504 Showcase</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,7 +33,8 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Other Submissions
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -64,29 +71,33 @@
 
                 <h3>Aspirations</h3>
 
-                <p>I am studying within the School of Design and Informatics at Abertay University. I have always been interested in computers and technology in general.
-                    Luckily i could turn my hobby into a career - i am currently working as a software developer in Germany.
+                <p>I am studying within the School of Design and Informatics at Abertay University. I have always been
+                    interested in computers and technology in general.
+                    Luckily i could turn my hobby into a career - i am currently working as a software developer in
+                    Germany.
                 </p>
                 <h3>Hobby</h3>
-                <p>My favorite leisure activity besides tinkering with technology is climbing - more specifically bouldering. There is nothing more rewarding than solving a hard route with your last bit of energy.
+                <p>My favorite leisure activity besides tinkering with technology is climbing - more specifically
+                    bouldering. There is nothing more rewarding than solving a hard route with your last bit of energy.
                     Usually i hang out at the climbing gym after bouldering with my friends and a bottle of "Club Mate".
                 </p>
                 <h3>Contact</h3>
-                <p>
                 <ul>
                     <li><a href="mailto:2208771@abertay.ac.uk">📧 E-Mail</a></li>
                 </ul>
-                </p>
                 <h3>Program at Abertay</h3>
                 <p>This module introduces the student to dynamic web applications,
                     through client-side and server-side web development. The module
                     also will enable the student to develop necessary skills to develop
                     complex database driven web applications, effectively employing
-                    server side technology.<sup style="color: blue"><span id="programSourceTooltip" data-bs-toggle="tooltip" data-bs-title="Taken from the HEP504 Module description">Source</span></sup></p>
+                    server side technology.<sup style="color: blue"><span id="programSourceTooltip"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Taken from the HEP504 Module description">Source</span></sup></p>
 
             </div>
             <div class="col-sm-6">
-                <img src="./assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow" style="max-height: 30vh;">
+                <img src="./assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow"
+                    style="max-height: 30vh;">
             </div>
         </div>
     </div>
@@ -97,7 +108,8 @@
                 <div class="toast-header text-bg-info">
                     <strong class="me-auto">Info</strong>
                     <small>just now</small>
-                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
 
                 </div>
                 <div class="toast-body">
