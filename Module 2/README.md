@@ -13,6 +13,8 @@ The file /config/db.sql contains the database schema, which could be deployed us
 # File hierachy
 ```mermaid
 graph TB
+  Na["news_article.php"]
+  Na -->|"requires"| F
   I["index.php"]
   I -->|"requires"| N["navigation.php"]
   I -->|"requires"| F["footer.php"]
@@ -21,8 +23,6 @@ graph TB
   Np -->|"requires"| F
   Np -->|"requires"| NC["news_cards.php"]
   NC -->|"requires"| DB["db.php"]
-  Na["news_article.php"]
-  Na -->|"requires"| F
   linkStyle 0 stroke:#2ecd71,stroke-width:2px;
   linkStyle 1 stroke:#2ecd71,stroke-width:2px;
   linkStyle 2 stroke:#2ecd71,stroke-width:2px;
