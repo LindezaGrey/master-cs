@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>News</title>
+    <title>News | Article</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src='main.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -12,6 +12,8 @@
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+
 </head>
 
 <style>
@@ -30,6 +32,13 @@ p {
                         style="max-height: 30vh;">
                     <figcaption class="fst-italic">Image Source: Midjourney</figcaption>
                 </figure>
+                <ul class="fst-italic">
+                    <li>A security flaw in the password manager KeePass allowed attackers to reconstruct the master
+                        password from a memory image.</li>
+                    <li>Version 2.54 of KeePass has been released to close this vulnerability.</li>
+                    <li>The update also includes new features and changes such as saving triggers, URL overrides, and
+                        password generator profiles in the enforced configuration file.</li>
+                </ul>
                 <p>A security flaw in the password manager KeePass allowed the
                     reconstruction of the master password from memory images. An update now closes it. With version 2.54
                     of the password manager KeePass,
