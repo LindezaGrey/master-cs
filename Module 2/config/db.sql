@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Erstellungszeit: 16. Mai 2023 um 13:13
+-- Erstellungszeit: 08. Jun 2023 um 14:07
 -- Server-Version: 10.4.29-MariaDB-1:10.4.29+maria~ubu2004
 -- PHP-Version: 7.4.15
 
@@ -23,8 +23,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
-  `content` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `content` longtext NOT NULL,
+  `title` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+
+--
+-- Daten für Tabelle `news`
+--
+
+INSERT INTO `news` (`id`, `content`, `title`) VALUES
+(1, 'Copied from news outlet', 'KeePass Security Gap'),
+(1, 'Dynamically loaded from DB', 'Some other news'),
 
 --
 -- Indizes der exportierten Tabellen

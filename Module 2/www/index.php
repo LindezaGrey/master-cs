@@ -7,7 +7,6 @@
     <title>Profile</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <link rel='stylesheet' type='text/css' media='screen' href='tables.css'>
     <script src='main.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous">
     </script>
@@ -19,105 +18,80 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">HEP504 Showcase</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Other Submissions
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./news.php">News</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Blog</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
-            </div>
-        </div>
-    </nav>
+    <div style="min-height: calc(100vh - 60px);">
+        <?php include 'navigation.php';
+        ?>
+        <div class="container my-5">
 
-    <div class="container my-5">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Andy Ziegler</h1>
+                    <!-- Contact Details -->
 
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>Andy Ziegler</h1>
-                <!-- Contact Details -->
+                    <ul>
 
-                <ul>
+                        <li>Based in Germany</li>
 
-                    <li>Based in Germany</li>
+                        <li>Studying CS @Abertay University</li>
 
-                    <li>Studying CS @Abertay University</li>
+                    </ul>
 
-                </ul>
+                    <h3>Aspirations</h3>
 
-                <h3>Aspirations</h3>
-
-                <p>I am studying within the School of Design and Informatics at Abertay University. I have always been
-                    interested in computers and technology in general.
-                    Luckily i could turn my hobby into a career - i am currently working as a software developer in
-                    Germany.
-                </p>
-                <h3>Hobby</h3>
-                <p>My favorite leisure activity besides tinkering with technology is climbing - more specifically
-                    bouldering. There is nothing more rewarding than solving a hard route with your last bit of energy.
-                    Usually i hang out at the climbing gym after bouldering with my friends and a bottle of "Club Mate".
-                </p>
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="mailto:2208771@abertay.ac.uk">📧 E-Mail</a></li>
-                </ul>
-                <h3>Program at Abertay</h3>
-                <p>This module introduces the student to dynamic web applications,
-                    through client-side and server-side web development. The module
-                    also will enable the student to develop necessary skills to develop
-                    complex database driven web applications, effectively employing
-                    server side technology.<sup style="color: blue"><span id="programSourceTooltip"
-                            data-bs-toggle="tooltip"
-                            data-bs-title="Taken from the HEP504 Module description">Source</span></sup></p>
-
-            </div>
-            <div class="col-sm-6">
-                <img src="./assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow"
-                    style="max-height: 30vh;">
-            </div>
-        </div>
-    </div>
-
-    <div aria-live="polite" aria-atomic="true" class="rounded-3">
-        <div class="toast-container p-3 bottom-0 end-0" id="toastPlacement">
-            <div id="introToast" class="toast">
-                <div class="toast-header text-bg-info">
-                    <strong class="me-auto">Info</strong>
-                    <small>just now</small>
-                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
-                        aria-label="Close"></button>
+                    <p>I am studying within the School of Design and Informatics at Abertay University. I have always
+                        been
+                        interested in computers and technology in general.
+                        Luckily i could turn my hobby into a career - i am currently working as a software developer in
+                        Germany.
+                    </p>
+                    <h3>Hobby</h3>
+                    <p>My favorite leisure activity besides tinkering with technology is climbing - more specifically
+                        bouldering. There is nothing more rewarding than solving a hard route with your last bit of
+                        energy.
+                        Usually i hang out at the climbing gym after bouldering with my friends and a bottle of "Club
+                        Mate".
+                    </p>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:2208771@abertay.ac.uk">📧 E-Mail</a></li>
+                    </ul>
+                    <h3>Program at Abertay</h3>
+                    <p>This module introduces the student to dynamic web applications,
+                        through client-side and server-side web development. The module
+                        also will enable the student to develop necessary skills to develop
+                        complex database driven web applications, effectively employing
+                        server side technology.<sup style="color: blue"><span id="programSourceTooltip"
+                                data-bs-toggle="tooltip"
+                                data-bs-title="Taken from the HEP504 Module description">Source</span></sup></p>
 
                 </div>
-                <div class="toast-body">
-                    This page contains the Task1 submission.
+                <div class="col-sm-6">
+                    <img src="./assets/profile.webp" alt="Andy Ziegler" class="img-fluid float-end rounded shadow"
+                        style="max-height: 30vh;">
+                </div>
+            </div>
+        </div>
+
+        <div aria-live="polite" aria-atomic="true" class="rounded-3">
+            <div class="toast-container p-3 bottom-0 end-0" id="toastPlacement">
+                <div id="introToast" class="toast">
+                    <div class="toast-header text-bg-info">
+                        <strong class="me-auto">Info</strong>
+                        <small>just now</small>
+                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                            aria-label="Close"></button>
+
+                    </div>
+                    <div class="toast-body">
+                        This page contains the Task1 submission.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- include footer -->
+    <?php include 'footer.php'
+    ?>
 </body>
 
 </html>

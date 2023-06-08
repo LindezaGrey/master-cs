@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var element = document.getElementById("introToast");
-
+    const element = document.getElementById("introToast");
     // Create toast instance
-    const introToast = new bootstrap.Toast(element);
-    introToast.show();
+    if (element) {
+        const introToast = new bootstrap.Toast(element);
+        introToast.show();
+    }
+
+    const newsToastEl = document.getElementById("newsToast");
+    // Create toast instance
+    if (newsToastEl) {
+        const newsToast = new bootstrap.Toast(newsToastEl);
+        newsToast.show();
+    }
+
 
     // create tooltips
     const tooltipEL = document.getElementById('programSourceTooltip')
-    const tooltip1 = new bootstrap.Tooltip(tooltipEL)
-
+    if (tooltipEL) {
+        const tooltip1 = new bootstrap.Tooltip(tooltipEL)
+    }
 });
