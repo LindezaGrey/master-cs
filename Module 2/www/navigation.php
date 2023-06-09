@@ -20,7 +20,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="./blog.php">Blog</a></li>
                     </ul>
                 </li>
             </ul>
