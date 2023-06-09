@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Erstellungszeit: 08. Jun 2023 um 14:07
+-- Erstellungszeit: 09. Jun 2023 um 13:47
 -- Server-Version: 10.4.29-MariaDB-1:10.4.29+maria~ubu2004
 -- PHP-Version: 7.4.15
 
@@ -18,6 +18,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `blog_posts`
+--
+
+CREATE TABLE `blog_posts` (
+  `post_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` mediumtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `image` varchar(255) NOT NULL,
+  `preview_text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `comments`
+--
+
+CREATE TABLE `comments` (
+  `comment_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `commenter_name` varchar(255) NOT NULL,
+  `comment` mediumtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
 -- Tabellenstruktur für Tabelle `news`
 --
 
@@ -25,19 +53,24 @@ CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `content` longtext NOT NULL,
   `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
-
---
--- Daten für Tabelle `news`
---
-
-INSERT INTO `news` (`id`, `content`, `title`) VALUES
-(1, 'Copied from news outlet', 'KeePass Security Gap'),
-(1, 'Dynamically loaded from DB', 'Some other news'),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indizes der exportierten Tabellen
 --
+
+--
+-- Indizes für die Tabelle `blog_posts`
+--
+ALTER TABLE `blog_posts`
+  ADD PRIMARY KEY (`post_id`);
+
+--
+-- Indizes für die Tabelle `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`comment_id`),
+  ADD KEY `post_id` (`post_id`);
 
 --
 -- Indizes für die Tabelle `news`
@@ -50,27 +83,39 @@ ALTER TABLE `news`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `news`
+-- Constraints der exportierten Tabellen
 --
-ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
-CREATE TABLE blog_posts (
-    post_id INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(255) NOT NULL,
-    content TEXT NOT NULL,
-    image VARCHAR(255) NOT NULL,
-    preview_text VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE comments (
-    comment_id INT PRIMARY KEY AUTO_INCREMENT,
-    post_id INT NOT NULL,
-    commenter_name VARCHAR(255) NOT NULL,
-    comment TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (post_id) REFERENCES blog_posts(post_id) ON DELETE CASCADE
-);
-
+--
+-- Constraints der Tabelle `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `blog_posts` (`post_id`) ON DELETE CASCADE;
 COMMIT;
+
+
+
+--
+-- Daten für Tabelle `news`
+--
+
+INSERT INTO `news` (`id`, `content`, `title`) VALUES
+(1, 'Dynamically loaded from DB', 'KeePass Security Gap'),
+(2, 'Dynamically loaded from DB', 'KeePass Security Gap');
+
+
+
+-- Daten für Tabelle `blog_posts`
+--
+
+INSERT INTO `blog_posts` (`post_id`, `title`, `content`, `image`, `preview_text`) VALUES
+(1, 'Password cracking', 'empty'),
+(2, 'Malware and Ransomware', 'TBD', 'malware.webp', 'blabal2');
+
+--
+-- Daten für Tabelle `comments`
+--
+
+INSERT INTO `comments` (`post_id`, `commenter_name`, `comment`) VALUES
+(1, 'Alex Bröcking', 'hjkhkhjk'),
+(1, 'Ziegler, Andreas', 'hellloooo');
