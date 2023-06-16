@@ -98,8 +98,8 @@
                                         rows="3"></textarea>
                                 </div>
                                 <?php echo <<<HTML
-                            <input type="hidden" name="blog_post_id" value="$blog_post_id">
-                            HTML; ?>
+                                    <input type="hidden" name="blog_post_id" value="$blog_post_id">
+                                HTML; ?>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Post comment</button>

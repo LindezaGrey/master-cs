@@ -20,31 +20,25 @@
 
 <body>
     <div style="min-height: calc(100vh - 60px);">
-        <?php include 'navigation.php';
-        ?>
+        <?php include 'navigation.php'; ?>
         <div class="container my-5">
 
             <div class="row">
                 <div class="col-sm-6">
                     <h1>Andy Ziegler</h1>
-                    <!-- Contact Details -->
-
                     <ul>
-
                         <li>Based in Germany</li>
-
                         <li>Studying CS @Abertay University</li>
-
                     </ul>
 
                     <h3>Aspirations</h3>
-
                     <p>I am studying within the School of Design and Informatics at Abertay University. I have always
                         been
                         interested in computers and technology in general.
                         Luckily i could turn my hobby into a career - i am currently working as a software developer in
                         Germany.
                     </p>
+
                     <h3>Hobby</h3>
                     <p>My favorite leisure activity besides tinkering with technology is climbing - more specifically
                         bouldering. There is nothing more rewarding than solving a hard route with your last bit of
@@ -52,10 +46,12 @@
                         Usually i hang out at the climbing gym after bouldering with my friends and a bottle of "Club
                         Mate".
                     </p>
+
                     <h3>Contact</h3>
                     <ul>
                         <li><a href="mailto:2208771@abertay.ac.uk">📧 E-Mail</a></li>
                     </ul>
+
                     <h3>Program at Abertay</h3>
                     <p>This module introduces the student to dynamic web applications,
                         through client-side and server-side web development. The module
@@ -91,8 +87,7 @@
         </div>
     </div>
     <!-- include footer -->
-    <?php include 'footer.php'
-    ?>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

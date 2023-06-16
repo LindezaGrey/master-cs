@@ -15,7 +15,7 @@ foreach ($blog_post as $row) {
             </div>
             <div class='card-body'>
                 <h5 class='card-title'>{$row["title"]}</h5>
-                <p class='card-text'>{$row["preview_text"]}</p>
+                <p  style='height: 200px;' class='card-text'>{$row["preview_text"]}</p>
                 <a href="./blog_post_full.php?blog_post_id={$row['post_id']}" class='btn btn-primary'>Read more</a>
             </div>
         </div>

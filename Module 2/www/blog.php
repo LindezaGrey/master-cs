@@ -18,21 +18,33 @@
 
 <body>
     <div style="min-height: calc(100vh - 60px);">
-
-        <?php include 'navigation.php';
-        ?>
+        <?php include 'navigation.php'; ?>
 
         <div class="container my-5">
             <h2>Andy`s tech blog</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4 ">
-                <?php include 'blog_cards.php';
-                ?>
+                <?php include 'blog_cards.php'; ?>
+            </div>
+        </div>
+    </div>
+    <div aria-live="polite" aria-atomic="true" class="rounded-3">
+        <div class="toast-container p-3 bottom-0 end-0" id="toastPlacementBlog">
+            <div id="blogToast" class="toast">
+                <div class="toast-header text-bg-info">
+                    <strong class="me-auto">Info</strong>
+                    <small>just now</small>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+
+                </div>
+                <div class="toast-body">
+                    This page contains the Task3 submission.
+                </div>
             </div>
         </div>
     </div>
     <!-- include footer -->
-    <?php include 'footer.php'
-    ?>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

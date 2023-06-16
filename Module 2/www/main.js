@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         newsToast.show();
     }
 
-
+    const blogToastEl = document.getElementById("blogToast");
+    // Create toast instance
+    if (blogToastEl) {
+        const blogToast = new bootstrap.Toast(blogToastEl);
+        blogToast.show();
+    }
     // create tooltips
     const tooltipEL = document.getElementById('programSourceTooltip')
     if (tooltipEL) {

@@ -23,6 +23,17 @@ graph TB
   Np -->|"requires"| F
   Np -->|"requires"| NC["news_cards.php"]
   NC -->|"requires"| DB["db.php"]
+  BPF["blog_post_full"] -->|"requires"| N
+  BPF["blog_post_full"] -->|"requires"| F
+  BPF["blog_post_full"] -->|"requires"| DB
+  BPFO["blog_process_form"]
+  BPF -->|"form action"| BPFO
+  BPFO -->|"requires"| DB
+  B["blog.php"] -->|"requires"|N
+  B -->|"requires"| F
+  BC["blog_cards.php"]
+  B -->|"requires"| BC
+  BC -->|"requires"| DB
   linkStyle 0 stroke:#2ecd71,stroke-width:2px;
   linkStyle 1 stroke:#2ecd71,stroke-width:2px;
   linkStyle 2 stroke:#2ecd71,stroke-width:2px;
@@ -30,4 +41,13 @@ graph TB
   linkStyle 4 stroke:#2ecd71,stroke-width:2px;
   linkStyle 5 stroke:#2ecd71,stroke-width:2px;
   linkStyle 6 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 7 stroke:#eb4034,stroke-width:2px;
+  linkStyle 8 stroke:#eb4034,stroke-width:2px;
+  linkStyle 9 stroke:#eb4034,stroke-width:2px;
+  linkStyle 10 stroke:#eb4034,stroke-width:2px;
+  linkStyle 11 stroke:#eb4034,stroke-width:2px;
+  linkStyle 12 stroke:#4334eb,stroke-width:2px;
+  linkStyle 13 stroke:#4334eb,stroke-width:2px;
+  linkStyle 14 stroke:#4334eb,stroke-width:2px;
+  linkStyle 15 stroke:#4334eb,stroke-width:2px;
 ```
