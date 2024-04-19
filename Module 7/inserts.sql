@@ -13,8 +13,12 @@ INSERT INTO warehouses (id, name) VALUES (NULL, 'Warehouse Castor');
 INSERT INTO warehouses (id, name) VALUES (NULL, 'Warehouse Pollux');
 
 -- Insert into products
-INSERT INTO products (id, name) VALUES (NULL, 'Sensor Typ XYZ');
-INSERT INTO products (id, name) VALUES (NULL, 'Actuator Typ ABC');
+-- INSERT INTO products (id, name, price, weight) VALUES (NULL, 'Sensor Typ XYZ');
+-- INSERT INTO products (id, name) VALUES (NULL, 'Actuator Typ ABC');
+-- OR from sample table
+INSERT INTO products (id, name, price, weight)
+SELECT null, PRODUCTNAME, PRICE, WEIGHT_KG FROM SAMPLE_PRODUCTS;
+
 
 -- Insert into departments
 INSERT INTO departments (id, name, location_id) VALUES (NULL, 'HR', 1);
@@ -22,8 +26,15 @@ INSERT INTO departments (id, name, location_id) VALUES (NULL, 'IT', 2);
 INSERT INTO departments (id, name, location_id) VALUES (NULL, 'Sales', 2);
 
 -- Insert into employees
-INSERT INTO employees (id, department_id, supervisor_id, name, ssn, email, start_date) VALUES (NULL, 1, NULL, 'John Doe', '123-45-6789', 'john.doe@example.com', DATE '2024-01-01');
-INSERT INTO employees (id, department_id, supervisor_id, name, ssn, email, start_date) VALUES (NULL, 2, 1, 'Jane Doe', '987-65-4321', 'jane.doe@example.com', DATE '2024-01-02');
+-- INSERT INTO employees (id, department_id, supervisor_id, name, ssn, email, start_date) VALUES (NULL, 1, NULL, 'John Doe', '123-45-6789', 'john.doe@example.com', DATE '2024-01-01');
+-- INSERT INTO employees (id, department_id, supervisor_id, name, ssn, email, start_date) VALUES (NULL, 2, 1, 'Jane Doe', '987-65-4321', 'jane.doe@example.com', DATE '2024-01-02');
+-- OR from sample table
+INSERT INTO employees (id, department_id, supervisor_id, name, ssn, email, start_date)
+SELECT NULL, 1, NULL, FIRST_NAME || ' ' || LAST_NAME as name, 'XE-' || round(dbms_random.value(0,99999)), EMAIL, DATE '2024-01-01' FROM SAMPLE_PEOPLE;
+
+-- UPDATE SALARY
+UPDATE employees
+SET SALARY = 50000;
 
 -- Insert into customers
 INSERT INTO customers (id, name, responsible_employee_id) VALUES (NULL, 'Tesla', 1);
