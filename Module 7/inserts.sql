@@ -66,5 +66,9 @@ INSERT INTO project_timetracking (id, project_id, employee_id, week_number, hour
 INSERT INTO dependants (id, employee_id, first_name, date_of_birth, relationship) VALUES (NULL, 1, 'Daisy', DATE '2010-04-10', 'Daughter');
 
 -- Insert into inventory
-INSERT INTO inventory (warehouse_id, product_id, stock) VALUES (1, 1, 100);
-INSERT INTO inventory (warehouse_id, product_id, stock) VALUES (2, 2, 150);
+-- INSERT INTO inventory (warehouse_id, product_id, stock) VALUES (1, 1, 100);
+-- INSERT INTO inventory (warehouse_id, product_id, stock) VALUES (2, 2, 150);
+INSERT INTO inventory (warehouse_id, product_id, stock)
+SELECT w.id ,p.id, round(dbms_random.value(1, 100)) FROM 
+    (SELECT * FROM PRODUCTS FETCH FIRST 100 ROWS ONLY) p
+CROSS JOIN WAREHOUSES w;
