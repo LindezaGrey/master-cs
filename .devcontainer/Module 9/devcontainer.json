@@ -1,0 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.3/containers/vue
+{
+	"name": "module-9-devcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspace",
+	// Set *default* container specific settings.json values on container create.
+	"customizations": {
+		"vscode": {
+			"terminal.integrated.profiles.linux": {
+				"bash": {
+					"path": "/bin/bash"
+				}
+			},
+			"settings": {
+				"python.pythonPath": "./Module 9/.venv/bin/python3.11",
+				"python.defaultInterpreterPath": "./Module 9/.venv/bin/python3.11",
+				"python.languageServer": "Default",
+				"python.formatting.autopep8Path": "./Module 9/.venv/bin/autopep8",
+				"python.formatting.blackPath": "./Module 9/.venv/bin/black",
+				"python.formatting.yapfPath": "./Module 9/.venv/bin/yapf"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"github.copilot",
+				"eamodio.gitlens",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"tonybaloney.vscode-pets",
+				"vscode-icons-team.vscode-icons",
+				"seatonjiang.gitmoji-vscode",
+				"zhuangtongfa.Material-theme",
+				"charliermarsh.ruff"
+			]
+		}
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "poetry config virtualenvs.create false && poetry update && poetry install",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

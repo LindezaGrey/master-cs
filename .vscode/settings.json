@@ -21,7 +21,7 @@
   "npm.packageManager": "yarn",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "python.analysis.typeCheckingMode": "off",
   "files.autoSave": "off"

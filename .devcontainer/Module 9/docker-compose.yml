@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  devcontainer:
+    container_name: master-cs-module-1
+    build:
+      context: ..
+      dockerfile: ./Module 9/Dockerfile
+      args:
+        PYTHON_VARIANT: 3.11-bullseye
+        POETRY_VERSION: 1.1.14
+    volumes:
+      - ../..:/workspace:cached
+    init: true
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
