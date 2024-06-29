@@ -3,9 +3,9 @@
 ARG PYTHON_VARIANT=3-bullseye
 FROM mcr.microsoft.com/vscode/devcontainers/python:${PYTHON_VARIANT}
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-ARG NODE_VERSION="none"
-RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
-RUN su vscode -c "umask 0002 && npm install -g http-server @vue/cli @vue/cli-service-global"
+# ARG NODE_VERSION="none"
+# RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
+# RUN su vscode -c "umask 0002 && npm install -g http-server @vue/cli @vue/cli-service-global"
 # install poetry
 ARG POETRY_VERSION="none"
 RUN if [ "${POETRY_VERSION}" != "none" ]; then su vscode -c "umask 0002 && pip3 install poetry==${POETRY_VERSION}"; fi
@@ -18,5 +18,5 @@ RUN if [ "${POETRY_VERSION}" != "none" ]; then su vscode -c "umask 0002 && pip3 
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
-EXPOSE 8080
-EXPOSE 3000
+# EXPOSE 8080
+# EXPOSE 3000
