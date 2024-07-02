@@ -1,9 +1,10 @@
 {
-  "python.testing.pytestArgs": [
-    "tests"
-  ],
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
   "eslint.workingDirectories": [
     "./frontend"
   ],
@@ -12,6 +13,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "python.analysis.typeCheckingMode": "off",
-  "files.autoSave": "off"
+  "files.autoSave": "off",
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "/workspace/Module 9",
+    "-p",
+    "test_*.py"
+  ],
+  "python.testing.pytestEnabled": false
 }
